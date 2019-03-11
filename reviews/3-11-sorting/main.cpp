@@ -10,16 +10,19 @@ using namespace std;
 int main() {
     session_header();
 
-    // Array of 5000
-    int* arr = new int[5000];
+	int SIZE = 0;
+	cout << "What size arrays to sort? ";
+	cin >> SIZE;
+    // Array
+    int* arr = new int[SIZE];
     // Bubble sort
-    populate_random(arr, 5000);
-    bubble_sort(arr, 5000);
+    populate_random(arr, SIZE);
+    bubble_sort(arr, SIZE);
     // Insertion sort
-    populate_random(arr, 5000);
-    insertion_sort(arr, 5000);
+    populate_random(arr, SIZE);
+    insertion_sort(arr, SIZE);
     // Quick sort
-    populate_random(arr, 5000);
-    quick_sort(arr, 5000);
+    populate_random(arr, SIZE);
+    quick_sort(arr, SIZE);
 
 }
