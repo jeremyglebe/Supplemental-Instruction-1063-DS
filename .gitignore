@@ -263,4 +263,4 @@ __pycache__/
 # My additions
 *.exe
 secret/
-.vscode/
+.vscode/*
