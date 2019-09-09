@@ -6,13 +6,12 @@
 * Install [MinGW](https://osdn.net/projects/mingw/releases/)
     * When choosing which elements of MinGW to install, make sure to select the C++ compiler `g++`
         * Once you've selected which elements of MinGW to install, click `installation` in the top left corner and then `apply changes`
-    * NOTE which directory MinGW is installed to, it should contain a folder called `bin/`
-    * Add MinGW's `bin/` folder to your `PATH`
+    * NOTE which directory MinGW is installed to, it should contain a folder called `bin\`
+    * Add MinGW's `bin\` folder to your `PATH`
     * On Windows 10, PATH can be modified by following these steps
-        1. In Search, search for and then select: System (Control Panel)
-        2. Click the Advanced system settings link.
-        3. Click Environment Variables. In the section System Variables, find the PATH environment variable and select it. Click Edit. If the PATH environment variable does not exist, click New.
-        4. In the Edit System Variable (or New System Variable) window, specify the value of the PATH environment variable. Click OK. Close all remaining windows by clicking OK.
+        1. In Search, search for and then select: Edit the system environment variables
+        2. Click Environment Variables. In the section System Variables, find the PATH environment variable and select it. Click Edit. If the PATH environment variable does not exist, click New.
+        3. In the Edit System Variable (or New System Variable) window, click "new" to add a new line to the PATH, then enter the path of MinGW's bin folder (C:\\wherever\i\installed\it\mingw\bin\). Click OK. Close all remaining windows by clicking OK.
 * Add extension "code runner" to VSCode
     * Configure code runner's command for executing C++ code
     * Change the `cpp` command to `cd $dir && g++ *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt` (add `cpp` to the list if necessary)
