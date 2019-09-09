@@ -5,6 +5,7 @@
 * Install [Git](https://git-scm.com/downloads)
 * Install [MinGW](https://osdn.net/projects/mingw/releases/)
     * When choosing which elements of MinGW to install, make sure to select the C++ compiler `g++`
+        * Once you've selected which elements of MinGW to install, click `installation` in the top left corner and then `apply changes`
     * NOTE which directory MinGW is installed to, it should contain a folder called `bin/`
     * Add MinGW's `bin/` folder to your `PATH`
     * On Windows 10, PATH can be modified by following these steps
