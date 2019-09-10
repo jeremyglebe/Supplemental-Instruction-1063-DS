@@ -37,3 +37,18 @@
     }
 }
 ```
+
+### How to Manage GitHub Repo with VSCode
+    * Make sure you ran the two required commands in the steps above
+    * Clone your repository
+        * Copy the clone link from GitHub
+        ![Copy the clone link from GitHub](./vsc_git_media/git_clone_link.gif)
+        * Hit CTRL+SHIFT+P, search for and use the clone command. Paste your cloning link.
+        * It will ask you where to make the clone, select a folder you wish to put the repo in. (The repo itself will be in a new folder, so if you choose `desktop`, it will create `desktop/your_repo_name`)
+        ![Hit CTRL+SHIFT+P, search for and use the clone command. Paste your cloning link.](./vsc_git_media/git_clone.gif)
+    * Now open the new folder (`your_repo_name`) with VSCode. We'll work from this folder from now on.
+    * Click around, create files, work on assignments, and whatever else you want to do.
+    * Once you have changes that you need to save and send to GitHub, click on the "Source Control" tab and the "Stage All Changes" button (which looks like a '+')
+    ![click on the "Source Control" tab and the "Stage All Changes" button](./vsc_git_media/stage_changes.gif)
+    * Now click the check mark that says "Commit" and type in an appropriate message describing your changes
+    ![click the check mark that says "Commit"" button](./vsc_git_media/commit.gif)
