@@ -1,4 +1,4 @@
-## Data Structures SI Study
+## Study Session: Development Environment
 
 ### Setting Up a Dev Environment With VSCode & Windows
 * Install [VSCode](https://code.visualstudio.com/)
