@@ -2,6 +2,11 @@
 
 ### Setting Up a Dev Environment With VSCode & Windows
 * Install [VSCode](https://code.visualstudio.com/)
+    * When installing VSCode, I recommend checking the following boxes in addition to the default settings. This is OPTIONAL though.
+        * Add "Open With Code" action to Windows Explorer file context menu
+        * Add "Open With Code" action to Windows Explorer directory context menu
+        * Add to PATH (requires shell restart)
+    * The first two options allow you to open VSCode by right clicking in a folder or file. The third option lets you open VSCode from command line using the command `code [folder_path]`.
 * Install [Git](https://git-scm.com/downloads)
     * As far as I can tell, it is unavoidable that you will have to do a quick config through the command line. Don't worry, just two commands and then everything else can be done through VSCode.
     * Open Git Bash and type the following two commands (replacing the name and email with your name and email)
