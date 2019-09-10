@@ -51,8 +51,9 @@
     * Once you have changes that you need to save and send to GitHub, click on the "Source Control" tab and the "Stage All Changes" button (which looks like a '+')
     ![click on the "Source Control" tab and the "Stage All Changes" button](./vsc_git_media/stage_changes.gif)
     * Now click the check mark that says "Commit" and type in an appropriate message describing your changes
-    ![click the check mark that says "Commit"" button](./vsc_git_media/commit.gif)
+    ![click the check mark that says "Commit" button](./vsc_git_media/commit.gif)
     * Now look at the bottom of your VSCode window. You should see two arrows forming a circle and next to them an up arrow and a down arrow (each accompanied by a number)
         * This is the "synchronize" button.
     * Click the synchronize button and you will automatically push all of your committed changes to GitHub as well as pull down anything you're missing from your local version of the repo.
         * The first time you do this, a window will pop up asking you to sign in to GitHub.
+    ![Click the synchronize button](./vsc_git_media/sync.gif)
