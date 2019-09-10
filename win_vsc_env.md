@@ -3,6 +3,10 @@
 ### Setting Up a Dev Environment With VSCode & Windows
 * Install [VSCode](https://code.visualstudio.com/)
 * Install [Git](https://git-scm.com/downloads)
+    * As far as I can tell, it is unavoidable that you will have to do a quick config through the command line. Don't worry, just two commands and then everything else can be done through VSCode.
+    * Open Git Bash and type the following two commands (replacing the name and email with your name and email)
+        * `git config --global user.name "John Doe"`
+        * `git config --global user.email "johndoe1955@hotmail.com"`
 * Install [MinGW](https://osdn.net/projects/mingw/releases/)
     * When choosing which elements of MinGW to install, make sure to select the C++ compiler `g++`
         * Once you've selected which elements of MinGW to install, click `installation` in the top left corner and then `apply changes`
