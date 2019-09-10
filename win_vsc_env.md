@@ -39,6 +39,7 @@
 ```
 
 ### How to Manage GitHub Repo with VSCode
+``` ```
     * Make sure you ran the two required commands in the steps above
     * Clone your repository
         * Copy the clone link from GitHub
