@@ -21,7 +21,7 @@
     * Configure code runner's command for executing C++ code
     * Change the `cpp` command to `cd $dir && g++ *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt` (add `cpp` to the list if necessary)
     * To configure, search the VSCode settings for something like
-``` {
+`{
     "code-runner.executorMap": {
         "javascript": "node",
         "php": "C:\\php\\php.exe",
@@ -34,7 +34,7 @@
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
     }
-} ```
+}`
 
 ### How to Manage GitHub Repo with VSCode
     * Make sure you ran the two required commands in the steps above
