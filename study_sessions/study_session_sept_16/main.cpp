@@ -9,6 +9,16 @@ bool string_match(string big, string small)
     return index >= 0;
 }
 
+string lower_string(string orig)
+{
+    string result = "";
+    for (int i = 0; i < orig.size(); i++)
+    {
+        result += tolower(orig[i]);
+    }
+    return result;
+}
+
 struct Pokemon
 {
     int id;
@@ -84,7 +94,7 @@ public:
         while (temp != NULL)
         {
             //if (temp->poke.name == pokemon_name)
-            if (string_match(temp->poke.name, pokemon_name))
+            if (string_match(lower_string(temp->poke.name), lower_string(pokemon_name)))
             {
                 return true;
             }
@@ -113,6 +123,8 @@ int main()
     }
 
     cout << pokedex.find("Ivysaur") << endl;
+    cout << pokedex.find("ivysaur") << endl;
     cout << pokedex.find("Hingle") << endl;
     cout << pokedex.find("saur") << endl;
+    cout << pokedex.find("mr.") << endl;
 }
