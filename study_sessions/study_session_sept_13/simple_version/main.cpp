@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// function only works if the input is even. We could make a version for odd
+// pretty easily but it would be big. The other version of the code accounts
+// for even/odd and looks nicer.
 void print_diamond(int input)
 {
     // r is row #, k is # of asterisks

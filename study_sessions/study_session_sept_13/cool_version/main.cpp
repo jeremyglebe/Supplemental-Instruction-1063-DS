@@ -24,6 +24,7 @@ void print_diamond(int input)
             //     k += 2;
             // else
             //     k -= 2;
+            // the line below is equivalent to the commented out code above
             k += r < input / 2 ? 2 : -2;
         }
     }
