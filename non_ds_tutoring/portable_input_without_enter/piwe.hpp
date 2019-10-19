@@ -5,6 +5,7 @@ const bool WINDOWS = true;
 #else
 #include <stdio.h>
 const bool WINDOWS = false;
+int getch();
 #endif
 
 #include <iostream>
@@ -14,20 +15,17 @@ namespace piwe
 
 char getkey()
 {
-    static bool unix_raw = false;
     if (WINDOWS)
     {
         return getch();
     }
-    else if (unix_raw)
-    {
-        return getchar();
-    }
     else
     {
-        system("stty cooked");
-        unix_raw = true;
-        return getchar();
+        char key;
+        system("stty raw -echo");
+        key = getchar();
+        system("stty cooked echo");
+        return key;
     }
 }
 
