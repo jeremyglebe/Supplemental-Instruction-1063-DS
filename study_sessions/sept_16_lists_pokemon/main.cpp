@@ -32,10 +32,19 @@ struct Pokemon
     int sdef;
     int spd;
     int gen;
+    // Default constructor
     Pokemon()
     {
-        return;
+        id = -1;
+        name = "Missing";
+        type1 = "X";
+        type2 = "X";
+        hp = atk = def = satk = sdef = spd = gen = -1;
     }
+    // This is kind of way to much, huh? We could come up with better, more
+    // compact ways to create this constructor. Perhaps a "stats" struct,
+    // which groups all the basic stats together? It is okay because we won't
+    // be using this constructor, but it is something to think about...
     Pokemon(int nid, string nname, string ntype1, string ntype2, int nhp, int natk, int ndef, int nsatk, int nsdef, int nspd, int ngen)
     {
         id = nid;
@@ -50,6 +59,8 @@ struct Pokemon
         spd = nspd;
         gen = ngen;
     }
+    // Wouldn't it be cool if in main we could do "cout << myPokemon" instead
+    // of "myPokemon.print()"? We'll get to this a few sessions from now.
     void print()
     {
         cout << id << name << type1 << type2 << hp
@@ -57,10 +68,14 @@ struct Pokemon
     }
 };
 
+// This is the Pokemon Node that forms our list
 struct Node
 {
+    // Every node should hold a pokemon and its info
     Pokemon poke;
+    // Every node should point to another node
     Node *next;
+    // This constructor lets us easily link nodes upon creation
     Node(Pokemon data, Node *n = NULL)
     {
         poke = data;
@@ -88,11 +103,14 @@ public:
         delete temp_del;
         return result;
     }
+
     bool find(string pokemon_name)
     {
         Node *temp = head;
         while (temp != NULL)
         {
+            // we use partial string matching instead of regular matching so that
+            // searches for "bulba" might return true based on "bulbasaur"
             //if (temp->poke.name == pokemon_name)
             if (string_match(lower_string(temp->poke.name), lower_string(pokemon_name)))
             {
