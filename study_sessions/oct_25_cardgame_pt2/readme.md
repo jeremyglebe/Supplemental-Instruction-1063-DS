@@ -1,4 +1,4 @@
-# Card Game Part 2: 
+# Card Game Part 2: Implementing the stack methods
 We are going to write a card game to be played in the terminal using concepts
 and data structures that we learned about in class. At first, we are going to
 make the game of "War".
