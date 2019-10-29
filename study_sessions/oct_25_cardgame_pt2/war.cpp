@@ -1,13 +1,3 @@
-// Define whether we are using Windows
-#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
-// fnctl.h is being used to fix windows
-#include <fcntl.h>
-const bool WINDOWS = true;
-#else
-const bool WINDOWS = false;
-int _setmode(int, int);
-#endif
-
 #include <iostream>
 #include <string>
 #include "Card.h"
@@ -21,12 +11,6 @@ float getValue(Card);
 
 int main()
 {
-    if (WINDOWS)
-    {
-        // _setmode is being used to fix windows
-        _setmode(_fileno(stdout), _O_U16TEXT);
-    }
-
     Deck deck;
     // populate it with cards 1-9 semi-random color
     srand(42);
@@ -42,7 +26,7 @@ int main()
         }
     }
     // print that deck, before any pops
-    deck.printAll(std::wcout);
+    deck.printAll(std::cout);
     // pop a few items and then push a king
     for (int i = 0; i < 4; i++)
     {
@@ -50,6 +34,6 @@ int main()
     }
     deck.push(Card('d', 'K'));
     // print the new deck
-    std::wcout << "\n\n";
-    deck.printAll(std::wcout);
+    std::cout << "\n\n";
+    deck.printAll(std::cout);
 }
