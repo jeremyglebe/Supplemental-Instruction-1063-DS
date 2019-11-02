@@ -153,6 +153,19 @@ public:
         // assign stack top to the shuffled list
         top = shuffled_top;
     }
+    static Deck std_deck()
+    {
+        Deck deck;
+        char faces[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
+        char suits[] = {'s', 'h', 'c', 'd'};
+        for (int i = 0; i < 52; i++)
+        {
+            char face = faces[i % 13];
+            char suit = suits[i / 13];
+            deck.push(Card(suit, face));
+        }
+        return deck;
+    }
 
 private:
     struct Node;

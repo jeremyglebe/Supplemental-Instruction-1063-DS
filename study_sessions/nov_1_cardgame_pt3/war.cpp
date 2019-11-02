@@ -12,33 +12,7 @@ float getValue(Card);
 
 int main()
 {
-    Deck deck;
-    // populate it with cards 1-9 semi-random color
-    srand(time(NULL));
-    for (char i = '1'; i <= '9'; i++)
-    {
-        if (rand() % 2)
-        {
-            deck.push(Card('s', i));
-        }
-        else
-        {
-            deck.push(Card('h', i));
-        }
-    }
-    // print that deck, before any pops
-    // deck.printAll(std::cout);
-    // pop a few items and then push a king
-    for (int i = 0; i < 4; i++)
-    {
-        deck.pop();
-    }
-    deck.push(Card('d', 'K'));
-    // print the new deck
-    std::cout << "\n\n";
-    deck.printAll(std::cout);
-    // shuffle and print again.
+    Deck deck = Deck::std_deck();
     deck.shuffle();
-    std::cout << "\n\n";
     deck.printAll(std::cout);
 }
