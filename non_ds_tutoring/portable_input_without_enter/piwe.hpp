@@ -1,32 +1,31 @@
 // Define whether we are using Windows
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+#define WINDOWS true
 #include <conio.h>
-const bool WINDOWS = true;
-#else
-#include <stdio.h>
-const bool WINDOWS = false;
-int getch();
 #endif
 
+// Included libraries
 #include <iostream>
+#if defined(WINDOWS)
+#include <conio.h>
+#else
+#include <stdio.h>
+#endif
 
 namespace piwe
 {
 
 char getkey()
 {
-    if (WINDOWS)
-    {
-        return getch();
-    }
-    else
-    {
-        char key;
-        system("stty raw -echo");
-        key = getchar();
-        system("stty cooked echo");
-        return key;
-    }
+#if defined(WINDOWS)
+    return getch();
+#else
+    char key;
+    system("stty -brkint -ignpar -istrip -icrnl -ixon -opost -isig -icanon -echo");
+    key = getchar();
+    system("stty cooked echo");
+    return key;
+#endif
 }
 
 } // namespace piwe
