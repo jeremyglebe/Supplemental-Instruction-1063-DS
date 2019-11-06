@@ -83,14 +83,14 @@ std::string TermGame::getarrow()
     }
 #endif
     // If a proper arrow key isn't pressed, throw an exception
-    std::string error_msg = "Non-arrow key pressed in response to TermGame::g";
-    error_msg += "etarrow()";
+    std::string error_msg = "KeyPressError: Non-arrow key pressed in response ";
+    error_msg += "to TermGame::getarrow()";
     throw KeyPressError(error_msg);
 }
 
 TermGame::KeyPressError::KeyPressError()
 {
-    what_message = "Invalid key pressed!";
+    what_message = "KeyPressError: Invalid key pressed!";
 }
 TermGame::KeyPressError::KeyPressError(std::string what_message)
 {
