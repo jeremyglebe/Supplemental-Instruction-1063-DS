@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "TermGame.hpp"
+#include "TermGame.h"
 using namespace std;
 
 int main()
