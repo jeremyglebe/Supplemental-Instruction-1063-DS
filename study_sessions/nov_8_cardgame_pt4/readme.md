@@ -1,4 +1,4 @@
-# Card Game Part 3: Deck shuffling
+# Card Game Part 4: Basic Game Setup
 We are going to write a card game to be played in the terminal using concepts
 and data structures that we learned about in class. At first, we are going to
 make the game of "War".
