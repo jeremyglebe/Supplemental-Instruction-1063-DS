@@ -22,7 +22,7 @@ have the same sum, it is a tie. Face cards (jack, queen, king) are all worth
 
 ### Assignment
 
-Create a visual game of Blackjack using the TermGame.h library. Cards may be
+Create a visual game of Blackjack using the [TermGame.h](https://github.com/jeremyglebe/TermGame) library. Cards may be
 represented as integers 0-51. There is not exact correct or incorrect output,
 but the structures above should be implemented and used in the game. In
 addition, the game should (regardless of implmentation) demonstrate the
